@@ -1,0 +1,280 @@
+@font-face {
+  font-family: 'thai';
+  src: URL('EDNamMool.ttf') format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: thai;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+.video-show > .name-con {
+  color: #f7f877;
+
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 2.5em;
+
+  position: absolute;
+  margin-top: 315px;
+  margin-left: 175px;
+}
+.page {
+  font-size: 1.3em;
+  color: #f7f877;
+
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.credit {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.7em;
+
+  position: absolute;
+  margin-top: 38px;
+  margin-left: 285px;
+}
+.video-show {
+  display: flex;
+  object-fit: contain;
+  height: 500px;
+}
+.reacts {
+  flex-grow: 1;
+  width: 30%;
+  text-align: center;
+}
+
+.ml6 {
+  position: relative;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: azure;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 0.5em;
+}
+
+.react {
+  margin: auto;
+  display: flex;
+  height: 18px;
+  align-items: center;
+  background-color: aqua;
+  padding: 5px;
+  border-radius: 15px;
+
+  width: 80px;
+}
+.react h4 {
+  font-size: 0.8rem;
+}
+.react > img {
+  align-items: center;
+  object-fit: contain;
+  height: 20px;
+  margin-right: 10px;
+}
+.reaction {
+  width: 480px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: 120px;
+  position: absolute;
+  margin-top: 360px;
+  margin-left: 10px;
+}
+.timer {
+  display: flex;
+  position: absolute;
+  margin-top: 5px;
+
+  margin-left: 290px;
+}
+
+.timer div {
+  color: #846708;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  background-color: #ffbd33;
+  height: 25px;
+  width: 38px;
+  border-radius: 18px;
+  text-align: center;
+  line-height: 25px;
+  border: 2px solid #826505;
+
+  align-items: center;
+}
+
+#toast {
+  font-family: Arial, Helvetica, sans-serif;
+
+  visibility: hidden;
+  max-width: 50px;
+  height: 30px;
+  /*margin-left: -125px;*/
+  margin: auto;
+  background-color: rgb(55, 44, 32);
+  color: #fff;
+  text-align: center;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin-top: 80px;
+  margin-left: 4px;
+  font-size: 0.6rem;
+  white-space: nowrap;
+  border-radius: 13px;
+}
+#toast #img {
+  width: 30px;
+  height: 30px;
+  border-radius: 40%;
+
+  float: left;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  box-sizing: border-box;
+
+  background-color: #111;
+  color: #fff;
+}
+
+#toast #desc {
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #fff;
+
+  padding: 8px;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s,
+    fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s,
+    fadeout 0.5s 4.5s;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes expand {
+  from {
+    min-width: 50px;
+  }
+  to {
+    min-width: 150px;
+  }
+}
+
+@keyframes expand {
+  from {
+    min-width: 50px;
+  }
+  to {
+    min-width: 150px;
+  }
+}
+@-webkit-keyframes stay {
+  from {
+    min-width: 150px;
+  }
+  to {
+    min-width: 150px;
+  }
+}
+
+@keyframes stay {
+  from {
+    min-width: 150px;
+  }
+  to {
+    min-width: 150px;
+  }
+}
+@-webkit-keyframes shrink {
+  from {
+    min-width: 150px;
+  }
+  to {
+    min-width: 50px;
+  }
+}
+
+@keyframes shrink {
+  from {
+    min-width: 150px;
+  }
+  to {
+    min-width: 50px;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 60px;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 60px;
+    opacity: 0;
+  }
+}
